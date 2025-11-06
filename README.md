@@ -1,47 +1,64 @@
-# LifeSense AI - Medical Chatbot
+# GlowBot - AI-Powered Beauty & Skincare Advisor
 
-A modern, responsive medical assistant chatbot built with React and powered by Google's Gemini AI. LifeSense AI provides healthcare information and support to all users through an intuitive, beautifully designed interface.
+An intelligent, minimalist beauty chatbot built with React and powered by Groq's AI. GlowBot provides personalized skincare routines, home remedies, and self-care guidance with a beautiful pastel-themed UI.
 
-## 🌟 Features
+## ✨ Features
 
 ### Core Features
-- **AI-Powered Medical Assistance**: Leverages Google Gemini API for accurate, evidence-based medical information
-- **General Healthcare Support**: Answers questions about diseases, symptoms, treatments, medications, and wellness
-- **Emergency Protocol**: Immediate guidance for critical medical situations
-- **Conversation History**: Clear chat history with message persistence during the session
-- **New Chat Sessions**: Start fresh conversations without context from previous chats
+- **AI-Powered Skincare Guidance**: Personalized skincare routines for all skin types (oily, dry, sensitive, combination)
+- **Home Remedies**: Natural, accessible ingredient suggestions using common household items
+- **Product Recommendations**: Honest beauty product suggestions based on skin type and concerns
+- **Self-Care Tips**: Wellness guidance, meditation reminders, hydration tips, and more
+- **Session-Based Conversations**: Continuous chat history during your session
+- **New Chat Sessions**: Start fresh conversations anytime
 
 ### User Interface
-- **Modern Homepage**: Landing page with features showcase, security information, FAQ, and "Get Started" CTA
-- **Professional Chat Interface**: Clean, responsive design with message bubbles and typing indicators
+- **Minimalist Pastel Design**: Soft pink (#FADADD), peach (#FFE5B4), lavender, and mint green color scheme
+- **Beautiful Homepage**: Features showcase, skincare routines, self-care tips, and FAQ
+- **Responsive Chat Interface**: Clean, modern design with soft gradient message bubbles
 - **Enter Key Support**: Send messages instantly by pressing Enter
-- **Mobile Responsive**: Fully responsive design that works on all device sizes
-- **Smooth Animations**: Beautiful transitions and floating effects
+- **Mobile Responsive**: Fully responsive design that works on all devices
+- **Smooth Animations**: Beautiful transitions and floating effects for spa-like experience
 
 ### Navigation
-- **Back to Home**: Easy navigation back to the homepage from the chatbot
-- **New Chat Button**: Create fresh conversations without leaving the interface
-- **Navigation Header**: Sticky header for quick access to features
+- **Back to Home**: Navigate back to the homepage anytime
+- **New Chat Button**: Create fresh conversations instantly
+- **Sticky Header**: Quick access to all features
 
-## 🛡️ Security & Privacy
+## 🌸 Skincare & Beauty Content
 
-- **Data Privacy**: No chat history is permanently stored
-- **HIPAA Compliance Ready**: Designed with healthcare privacy standards in mind
-- **Secure Communication**: All API calls use HTTPS
-- **No Personal Data Retention**: Each new chat starts fresh
+### Skincare Routines
+GlowBot provides step-by-step routines:
+- **Morning Routine**: Cleanser → Toner → Moisturizer → Sunscreen
+- **Evening Routine**: Cleanser → Treatment → Night Cream
+- **Weekly Care**: Masks, scrubs, and relaxation practices
+
+### Home Remedies
+- Honey and lemon masks
+- Aloe vera treatments
+- Cucumber compress for dark circles
+- Natural exfoliants and moisturizers
+- Plant-based ingredients readily available at home
+
+### Product Recommendations
+- Budget-friendly options
+- Natural and organic products
+- Skin type specific suggestions
+- Links and price ranges included
 
 ## 🚀 Getting Started
 
 ### Prerequisites
 - Node.js (v14 or higher)
-- npm or yarn package manager
-- Google Gemini API Key
+- npm or yarn
+- Groq API Key (get free API key at https://groq.com)
 
 ### Installation
 
 1. **Clone the repository**
 ```bash
-git clone <https://github.com/ShridhiGupta/Medical-Chatbot.git>
+git clone https://github.com/yourusername/GlowBot.git
+cd GlowBot
 ```
 
 2. **Install dependencies**
@@ -49,12 +66,10 @@ git clone <https://github.com/ShridhiGupta/Medical-Chatbot.git>
 npm install
 ```
 
-3. **Set up environment variables**
-Create or update the API key in `server.js`:
+3. **Set up Groq API Key**
+Update the API key in `server.js`:
 ```javascript
-const ai = new GoogleGenAI({
-  apiKey: "YOUR_GOOGLE_GENAI_API_KEY",
-});
+const GROQ_API_KEY = process.env.GROQ_API_KEY || "your-groq-api-key-here";
 ```
 
 ### Running the Application
@@ -74,50 +89,50 @@ The app will open at `http://localhost:3000`
 ## 📁 Project Structure
 
 ```
-Medical-Chatbot/
+GlowBot/
 ├── public/
 │   └── index.html                 # Main HTML file
 ├── src/
 │   ├── components/
-│   │   ├── HomePage.js            # Landing page component
+│   │   ├── HomePage.js            # Landing page with features
 │   │   ├── ChatWindow.js          # Chat message display
 │   │   ├── InputBox.js            # Message input field
 │   │   └── MessageBubble.js       # Individual message component
 │   ├── styles/
 │   │   ├── App.css                # App container styles
-│   │   ├── HomePage.css           # Homepage styles
+│   │   ├── HomePage.css           # Homepage with pastel theme
 │   │   ├── ChatWindow.css         # Chat window styles
 │   │   ├── InputBox.css           # Input field styles
 │   │   ├── MessageBubble.css      # Message bubble styles
 │   │   └── index.css              # Global styles
-│   ├── App.js                     # Main app component with routing
+│   ├── App.js                     # Main app component
 │   └── index.js                   # React entry point
-├── server.js                      # Backend server with API endpoints
-├── package.json                   # Project dependencies
+├── server.js                      # Backend with Groq API
+├── package.json                   # Dependencies
 └── README.md                      # This file
 ```
 
 ## 🔧 API Endpoints
 
 ### `/api/chat` (POST)
-Sends a message to the chatbot and receives a response.
+Sends a message to the beauty chatbot.
 
 **Request:**
 ```json
 {
-  "message": "What are the symptoms of diabetes?"
+  "message": "Create a morning routine for oily skin"
 }
 ```
 
 **Response:**
 ```json
 {
-  "text": "Diabetes symptoms can include..."
+  "text": "Here's a perfect morning routine for oily skin..."
 }
 ```
 
 ### `/api/new-chat` (POST)
-Creates a fresh chat session, clearing all conversation history on the backend.
+Creates a fresh chat session.
 
 **Response:**
 ```json
@@ -128,90 +143,88 @@ Creates a fresh chat session, clearing all conversation history on the backend.
 
 ## 🎨 Design Features
 
-### Color Scheme
-- **Primary Gradient**: Purple (#667eea) to Violet (#764ba2)
-- **Accent Colors**: White, Light Gray
-- **Message Bubbles**: User messages in gradient purple, Bot messages in light gray
+### Color Scheme (Pastel Theme)
+- **Primary Colors**: Blush Pink (#FADADD), Peach (#FFE5B4)
+- **Secondary Colors**: Mint Green (#C8E6C9), Soft Lavender (#E6E6FA)
+- **Background**: Off-white (#FFF9F9)
+- **Text**: Dark Gray (#333333)
+- **Accent**: Subtle gradients (pink → peach)
 
 ### Typography
 - **Headlines**: Montserrat (Bold, 700)
 - **Body Text**: Roboto (Regular, 500)
-- **Font Size**: Responsive across all devices
+- **Responsive sizing** across all devices
 
 ### Animations
-- **Floating Elements**: Smooth up-and-down floating motion
-- **Fade-in Messages**: New messages fade in smoothly
-- **Hover Effects**: Interactive buttons with transform animations
-- **Slide-up Entrance**: Components animate in when first loaded
+- **Floating Elements**: Smooth up-and-down motion
+- **Fade-in Messages**: Messages appear smoothly
+- **Hover Effects**: Interactive buttons with transforms
+- **Slide-up Entrance**: Components animate in when loaded
 
-## 🎯 User Flows
+## 💬 Usage Examples
 
-### Homepage Flow
-1. User lands on homepage
-2. Views features, security information, and FAQ
-3. Clicks "Get Started" button
-4. Navigated to chat interface
+### Example 1: Skincare Routine
+**User**: "Create a morning routine for dry skin"
+**GlowBot**: Provides step-by-step routine with emojis and natural ingredient suggestions
 
-### Chat Flow
-1. User enters the chat interface
-2. Types a message and presses Enter or clicks Send
-3. Message appears as a bubble on the right
-4. AI response appears as a bubble on the left
-5. Can start a new chat or return to homepage
+### Example 2: Home Remedy
+**User**: "Home remedy for acne?"
+**GlowBot**: Suggests honey masks, tea tree oil, aloe vera with application instructions
 
-## 📱 Responsive Design
+### Example 3: Wellness Tip
+**User**: "How to improve my skin health?"
+**GlowBot**: Includes skincare, hydration, sleep, meditation, and diet tips
 
-The application is fully responsive with breakpoints for:
-- **Desktop**: Full-width layouts with side-by-side elements
-- **Tablet**: Adjusted spacing and font sizes
-- **Mobile**: Single-column layout with optimized touch targets
+## ⚠️ Important Disclaimers
 
-## 🧠 Chatbot Capabilities
-
-The LifeSense AI chatbot can:
-- Answer general medical questions
-- Provide information about diseases and symptoms
-- Explain treatment options and medications
-- Offer wellness and prevention advice
-- Guide users on when to seek professional medical help
-- Support patients in recovery
-- Provide nutrition and lifestyle guidance
-
-### Emergency Handling
-The chatbot immediately escalates and advises emergency care for:
-- Chest pain or difficulty breathing
-- Severe bleeding
-- Loss of consciousness
-- Severe allergic reactions
-- Other life-threatening symptoms
+- **Not Medical Advice**: GlowBot provides beauty and wellness guidance, not medical diagnosis
+- **Patch Testing**: Always test new ingredients on a small patch of skin first
+- **Professional Consultation**: For skin diseases, infections, or persistent issues, consult a dermatologist
+- **Individual Variation**: Everyone's skin reacts differently; results may vary
 
 ## 🛠️ Technology Stack
 
 - **Frontend**: React 18.0.0
 - **Backend**: Express 5.1.0
-- **AI**: Google Gemini API (@google/genai 1.20.0)
+- **AI Model**: Groq AI (Mixtral-8x7b)
 - **Styling**: CSS3 with Glassmorphism and Gradients
-- **CORS**: Enabled for cross-origin requests
-- **Type Safety**: TypeScript support
+- **API**: Groq REST API
+- **Package Manager**: npm
 
-## 📦 Dependencies
+## 🔐 Privacy & Security
 
-```json
-{
-  "@google/genai": "^1.20.0",
-  "cors": "^2.8.5",
-  "express": "^5.1.0",
-  "react": "^18.0.0",
-  "react-dom": "^18.0.0",
-  "react-scripts": "5.0.0",
-  "typescript": "^4.5.0"
-}
-```
+- **No Data Storage**: Chat history is not permanently stored
+- **Session-Based**: Each conversation starts fresh
+- **Secure Communication**: All API calls use HTTPS
+- **Privacy First**: Your beauty preferences stay private
+
+## 📱 Responsive Breakpoints
+
+- **Desktop**: Full-width layouts with optimized spacing
+- **Tablet**: Adjusted layout and font sizes
+- **Mobile**: Single-column layout with touch-optimized buttons
+
+## 🧠 Chatbot Capabilities
+
+GlowBot can:
+- Create personalized skincare routines
+- Suggest home remedies for beauty concerns
+- Recommend products based on skin type
+- Provide makeup and styling tips
+- Offer wellness and self-care guidance
+- Include beauty affirmations and motivation
+- Guide proper ingredient usage and application
+
+### Restricted Topics
+GlowBot politely declines and recommends professional consultation for:
+- Medical skin conditions (eczema, psoriasis, infections)
+- Prescription medications
+- Severe or persistent skin issues
+- Medical diagnoses
 
 ## 🚀 Deployment
 
 ### Building for Production
-
 ```bash
 npm run build
 ```
@@ -219,44 +232,17 @@ npm run build
 Creates an optimized production build in the `build/` directory.
 
 ### Server Deployment
-
-The `server.js` file can be deployed to any Node.js hosting platform:
+The `server.js` can be deployed to:
 - Heroku
-- AWS
-- Google Cloud
-- Azure
+- AWS Lambda
+- Google Cloud Run
+- Azure App Service
 - DigitalOcean
-- Any VPS with Node.js
-
-## 📝 Usage Examples
-
-### Example 1: General Health Question
-**User**: "What are the symptoms of common cold?"
-**Chatbot**: Provides detailed symptoms, duration, and when to see a doctor.
-
-### Example 2: Medication Question
-**User**: "How should I take paracetamol?"
-**Chatbot**: Explains dosage, frequency, and potential side effects.
-
-### Example 3: Wellness Question
-**User**: "How can I improve my sleep?"
-**Chatbot**: Provides evidence-based sleep hygiene tips.
-
-### Example 4: Emergency Situation
-**User**: "I have severe chest pain"
-**Chatbot**: Immediately advises to seek emergency medical care.
-
-## ⚠️ Disclaimer
-
-**Important**: LifeSense AI is an informational tool and NOT a substitute for professional medical consultation. Always consult with licensed healthcare professionals for:
-- Medical diagnosis
-- Treatment planning
-- Prescription medication
-- Emergency situations
+- Any Node.js hosting platform
 
 ## 🤝 Contributing
 
-To contribute to this project:
+To contribute:
 1. Fork the repository
 2. Create a feature branch (`git checkout -b feature/YourFeature`)
 3. Make your changes
@@ -264,22 +250,26 @@ To contribute to this project:
 5. Push to the branch (`git push origin feature/YourFeature`)
 6. Open a Pull Request
 
-
 ## 📞 Support
 
 For issues, questions, or suggestions:
-- Open an issue on the repository
-- Contact (Email: guptashridhi11@gmail.com)
+- Open an issue on GitHub
+- Check existing issues for solutions
+- Provide detailed description of your concern
 
-## 🙏 Acknowledgments
+## 📄 License
+
+MIT License - feel free to use this project
+
+## 🎉 Acknowledgments
 
 - Built with React and modern web technologies
-- Powered by Google Gemini AI
-- Inspired by modern healthcare applications
-- Special thanks to all contributors
+- Powered by Groq AI
+- Minimalist pastel design inspired by beauty and wellness
+- Special thanks to the open-source community
 
 ---
 
-**LifeSense AI** - Empowering users with instant healthcare information.
+**GlowBot** - Empowering natural beauty and self-care with AI ✨
 
 Last Updated: 2024

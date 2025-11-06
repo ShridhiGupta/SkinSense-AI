@@ -7,7 +7,7 @@ import "./styles/App.css";
 function App() {
   const [currentPage, setCurrentPage] = useState("home"); // 'home' or 'chat'
   const [messages, setMessages] = useState([
-    { sender: "bot", text: "Hello! How can I help you today?" }
+    { sender: "bot", text: "✨ Welcome to SkinSense AI! Ask me about skincare routines, home remedies, or self-care tips. What's your skin type today?" }
   ]);
   const [loading, setLoading] = useState(false);
 
@@ -41,7 +41,7 @@ function App() {
 
   const handleNewChat = () => {
     setMessages([
-      { sender: "bot", text: "Hello! How can I help you today?" }
+      { sender: "bot", text: "✨ Welcome to SkinSense AI! Ask me about skincare routines, home remedies, or self-care tips. What's your skin type today?" }
     ]);
     // Reset backend chat session
     fetch("http://localhost:5000/api/new-chat", {
@@ -58,7 +58,7 @@ function App() {
     <div className="app-container">
       <div className="chat-header">
         <button className="back-btn" onClick={handleBackToHome}>← Back to Home</button>
-        <h1 className="chat-title">LifeSense AI Chatbot</h1>
+        <h1 className="chat-title">✨ SkinSense AI - Your Beauty Advisor</h1>
         <button className="new-chat-btn" onClick={handleNewChat}>+ New Chat</button>
       </div>
       <ChatWindow messages={messages} />

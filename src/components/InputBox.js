@@ -25,7 +25,7 @@ function InputBox({ onSend, disabled }) {
         value={input}
         onChange={e => setInput(e.target.value)}
         onKeyPress={handleKeyPress}
-        placeholder="Type your message..."
+        placeholder="Ask about skincare, beauty routines, or self-care..."
         disabled={disabled}
       />
       <button onClick={handleSend} disabled={disabled}>

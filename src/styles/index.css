@@ -7,9 +7,10 @@
 body {
   margin: 0;
   font-family: 'Montserrat', 'Roboto', Arial, sans-serif;
-  background: #f5f6fa;
+  background: linear-gradient(135deg, #FFF9F9 0%, #FFE5E5 50%, #FFF0F5 100%);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: #333;
 }
 
 code {
