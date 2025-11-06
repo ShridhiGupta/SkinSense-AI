@@ -1,6 +1,6 @@
-# GlowBot - AI-Powered Beauty & Skincare Advisor
+# SkinSense AI - Your Personal Skincare & Wellness Advisor
 
-An intelligent, minimalist beauty chatbot built with React and powered by Groq's AI. GlowBot provides personalized skincare routines, home remedies, and self-care guidance with a beautiful pastel-themed UI.
+An intelligent, minimalist beauty chatbot built with React and powered by Groq's AI. SkinSense AI provides personalized skincare routines, home remedies, and self-care guidance with a beautiful pastel-themed UI.
 
 ## ✨ Features
 
@@ -28,7 +28,7 @@ An intelligent, minimalist beauty chatbot built with React and powered by Groq's
 ## 🌸 Skincare & Beauty Content
 
 ### Skincare Routines
-GlowBot provides step-by-step routines:
+SkinSense AI provides step-by-step routines:
 - **Morning Routine**: Cleanser → Toner → Moisturizer → Sunscreen
 - **Evening Routine**: Cleanser → Treatment → Night Cream
 - **Weekly Care**: Masks, scrubs, and relaxation practices
@@ -57,8 +57,8 @@ GlowBot provides step-by-step routines:
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/yourusername/GlowBot.git
-cd GlowBot
+git clone https://github.com/yourusername/SkinSense-AI.git
+cd SkinSense-AI
 ```
 
 2. **Install dependencies**
@@ -89,7 +89,7 @@ The app will open at `http://localhost:3000`
 ## 📁 Project Structure
 
 ```
-GlowBot/
+SkinSense AI/
 ├── public/
 │   └── index.html                 # Main HTML file
 ├── src/
@@ -165,19 +165,19 @@ Creates a fresh chat session.
 
 ### Example 1: Skincare Routine
 **User**: "Create a morning routine for dry skin"
-**GlowBot**: Provides step-by-step routine with emojis and natural ingredient suggestions
+**SkinSense AI**: Provides step-by-step routine with emojis and natural ingredient suggestions
 
 ### Example 2: Home Remedy
 **User**: "Home remedy for acne?"
-**GlowBot**: Suggests honey masks, tea tree oil, aloe vera with application instructions
+**SkinSense AI**: Suggests honey masks, tea tree oil, aloe vera with application instructions
 
 ### Example 3: Wellness Tip
 **User**: "How to improve my skin health?"
-**GlowBot**: Includes skincare, hydration, sleep, meditation, and diet tips
+**SkinSense AI**: Includes skincare, hydration, sleep, meditation, and diet tips
 
 ## ⚠️ Important Disclaimers
 
-- **Not Medical Advice**: GlowBot provides beauty and wellness guidance, not medical diagnosis
+- **Not Medical Advice**: SkinSense AI provides beauty and wellness guidance, not medical diagnosis
 - **Patch Testing**: Always test new ingredients on a small patch of skin first
 - **Professional Consultation**: For skin diseases, infections, or persistent issues, consult a dermatologist
 - **Individual Variation**: Everyone's skin reacts differently; results may vary
@@ -270,6 +270,6 @@ MIT License - feel free to use this project
 
 ---
 
-**GlowBot** - Empowering natural beauty and self-care with AI ✨
+**SkinSense AI** - Your Personal Skincare & Wellness Advisor ✨
 
 Last Updated: 2024
