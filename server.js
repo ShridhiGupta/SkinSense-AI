@@ -19,7 +19,7 @@ const GROQ_API_URL = "https://api.groq.com/openai/v1/chat/completions";
 
 if (!GROQ_API_KEY) {
   console.log("\n" + "=".repeat(70));
-  console.log("⚠️  GROQ API KEY NOT SET - Using Mock Responses");
+  console.log("GROQ API KEY NOT SET - Using Mock Responses");
   console.log("=".repeat(70));
   console.log("To use real AI responses, set your Groq API key:");
   console.log("  Windows CMD: set GROQ_API_KEY=your_api_key");
